@@ -19,7 +19,8 @@ import { dirname, join } from "node:path";
 
 // 預設用 workflow 的 GITHUB_TOKEN；若讀公開 repo 被權限擋住，可在 repo secrets 設 GH_PAT
 // （fine-grained PAT，只要 public repo read），這裡會優先採用。
-const TOKEN = process.env.GH_PAT ?? process.env.GITHUB_TOKEN ?? "";
+// 注意：用 || 不是 ??——workflow 裡沒設的 secret 會是空字串，`??` 會讓空字串勝出（曾因此 401）。
+const TOKEN = (process.env.GH_PAT || process.env.GITHUB_TOKEN || "").trim();
 const API = "https://api.github.com";
 const PAGE = 100;
 const MAX_PAGES = 60;
