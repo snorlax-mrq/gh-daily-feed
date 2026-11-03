@@ -100,6 +100,8 @@ jobs:
           git config user.name "daily-export[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm -rf /tmp/export-out && cp -r out /tmp/export-out
+          # out/ 是未追蹤的產物；不先清掉，切到 daily-feed 時 git 會拒絕覆蓋
+          rm -rf out
           if git ls-remote --exit-code --heads origin daily-feed >/dev/null 2>&1; then
             git fetch origin daily-feed
             git checkout -B daily-feed origin/daily-feed
