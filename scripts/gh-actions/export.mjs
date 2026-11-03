@@ -25,6 +25,47 @@ const API = "https://api.github.com";
 const PAGE = 100;
 const MAX_PAGES = 60;
 
+/**
+ * 遮蔽標題裡「看起來像憑證」的字串。
+ * 為什麼需要：issue／PR 標題常常是使用者貼上來的，偶爾真的夾著 token。
+ * 公開快照不該把它複製一份到別的 repo——而且 GitHub 的 push protection 會直接擋下
+ * 整個推送（實測 2026-10-26 那天就因此失敗）。遮蔽後保留「這裡提到過一個 token」的語意。
+ */
+const SECRET_PATTERNS = [
+  // 前面加 lookbehind：避免把 "risk-message-delivery" 這種 label 誤判成 sk- 開頭的 key
+  /(?<![A-Za-z0-9_-])gh[pousr]_[A-Za-z0-9]{16,}/g,   // GitHub classic token
+  /(?<![A-Za-z0-9_-])github_pat_[A-Za-z0-9_]{20,}/g, // GitHub fine-grained token
+  /(?<![A-Za-z0-9_-])sk-[A-Za-z0-9_-]{20,}/g,        // OpenAI 風格（放寬長度，避免撞到普通字）
+  /(?<![A-Za-z0-9])AKIA[0-9A-Z]{16}/g,               // AWS access key id
+  /(?<![A-Za-z0-9])xox[baprs]-[A-Za-z0-9-]{10,}/g,   // Slack
+  /(?<![A-Za-z0-9])eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{5,}/g, // JWT
+  /-----BEGIN [A-Z ]*PRIVATE KEY-----/g,
+];
+
+function redact(v) {
+  if (typeof v !== "string") return v;
+  let out = v;
+  for (const re of SECRET_PATTERNS) {
+    out = out.replace(re, (m) => `${m.slice(0, 4)}…[redacted ${m.length} chars]`);
+  }
+  return out;
+}
+
+let redactedCount = 0;
+function redactAll(obj) {
+  if (Array.isArray(obj)) return obj.map(redactAll);
+  if (obj && typeof obj === "object") {
+    for (const k of Object.keys(obj)) obj[k] = redactAll(obj[k]);
+    return obj;
+  }
+  if (typeof obj === "string") {
+    const r = redact(obj);
+    if (r !== obj) redactedCount++;
+    return r;
+  }
+  return obj;
+}
+
 const [, , repoArg, dateArg] = process.argv;
 if (!repoArg) {
   console.error("用法：node export.mjs <owner/repo> [YYYY-MM-DD]");
@@ -180,8 +221,10 @@ const out = {
 
 const dir = join("out", repoArg.replace("/", "__"));
 mkdirSync(dir, { recursive: true });
+redactAll(out);
 const file = join(dir, `${day}.json`);
 writeFileSync(file, JSON.stringify(out, null, 2) + "\n");
+if (redactedCount) console.error(`🛡 遮蔽了 ${redactedCount} 處疑似憑證字串`);
 console.log(
   `✓ ${repoArg} ${day}：merged ${merged.length}、created ${created.length}、issues ${closed.length} → ${file}`
 );
