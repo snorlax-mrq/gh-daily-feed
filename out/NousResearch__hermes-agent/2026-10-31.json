@@ -1,0 +1,2148 @@
+{
+  "repo": "NousResearch/hermes-agent",
+  "date": "2026-10-31",
+  "window": {
+    "from": "2026-10-30T16:00:00Z",
+    "to": "2026-10-31T16:00:00Z",
+    "tz": "Asia/Taipei"
+  },
+  "coverage": {
+    "merged": {
+      "pages": 3,
+      "stop": "updatedAt 早停",
+      "in_window": 18
+    },
+    "created": {
+      "pages": 9,
+      "stop": "createdAt 早停",
+      "in_window": 201
+    },
+    "issues": {
+      "pages": 1,
+      "stop": "已到最後一頁",
+      "in_window": 7
+    },
+    "truncated": false
+  },
+  "merged_pulls": [
+    {
+      "number": 147143,
+      "title": "feat(gateway): rooms can opt into intentional silence (salvage #141293)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147143",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T10:02:43Z",
+      "labels": [
+        "type/feature",
+        "comp/gateway",
+        "area/config",
+        "P3"
+      ]
+    },
+    {
+      "number": 147144,
+      "title": "fix(telegram): group messages not addressed to the bot can stay silent (#120051, salvage #137267)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147144",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T10:03:50Z",
+      "labels": [
+        "type/bug",
+        "comp/plugins",
+        "platform/telegram",
+        "P2"
+      ]
+    },
+    {
+      "number": 147090,
+      "title": "fix(terminal): one persistent-Docker container per named profile (salvage #146468)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147090",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T06:03:59Z",
+      "labels": [
+        "type/bug",
+        "comp/gateway",
+        "comp/tools",
+        "tool/terminal",
+        "backend/docker",
+        "P3",
+        "area/sessions",
+        "area/profiles"
+      ]
+    },
+    {
+      "number": 146396,
+      "title": "fix(update): Windows checkout-lock probe no longer leaks a ctypes type per call",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146396",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T09:03:46Z",
+      "labels": [
+        "type/bug",
+        "comp/cli",
+        "P2",
+        "os/windows"
+      ]
+    },
+    {
+      "number": 146406,
+      "title": "fix(browser): raw CDP request blocking, interception and IPv6 URLs work on guarded backends",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146406",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T09:03:39Z",
+      "labels": [
+        "type/security",
+        "comp/tools",
+        "tool/browser",
+        "P3"
+      ]
+    },
+    {
+      "number": 146403,
+      "title": "fix(skills): document env setup keeps PY and spares a working venv; text+Enter documented truthfully",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146403",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T09:03:22Z",
+      "labels": [
+        "type/bug",
+        "tool/terminal",
+        "tool/skills",
+        "P2"
+      ]
+    },
+    {
+      "number": 146397,
+      "title": "test(docker): the fail-closed dashboard guard no longer passes when every docker exec stalls",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146397",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T09:03:07Z",
+      "labels": [
+        "type/test",
+        "P3"
+      ]
+    },
+    {
+      "number": 146394,
+      "title": "fix(plugins): desktop plugin names cannot reach outside the plugins folder on Windows",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146394",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T09:02:47Z",
+      "labels": [
+        "type/security",
+        "P3",
+        "os/windows"
+      ]
+    },
+    {
+      "number": 146402,
+      "title": "fix(desktop): plugin tree checks stop refusing Desktop/ folders and root-layout .git, and cover host desktop/ halves",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146402",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T09:02:09Z",
+      "labels": [
+        "type/bug",
+        "comp/cli",
+        "P2",
+        "comp/desktop",
+        "comp/dashboard",
+        "os/windows"
+      ]
+    },
+    {
+      "number": 146937,
+      "title": "fix(gateway): read the RPC owner scope and ancillary polls off the event loop",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146937",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T07:26:23Z",
+      "labels": [
+        "type/bug",
+        "comp/gateway",
+        "comp/tools",
+        "P2",
+        "area/sessions",
+        "area/profiles"
+      ]
+    },
+    {
+      "number": 146910,
+      "title": "fix(gateway): stop per-frame deflate and per-tool control reads from saturating the loop",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146910",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T07:26:14Z",
+      "labels": [
+        "type/bug",
+        "comp/cli",
+        "P2",
+        "comp/dashboard",
+        "area/streaming"
+      ]
+    },
+    {
+      "number": 146911,
+      "title": "fix(gateway): preserve owner Bot Chat history on first delivery (salvage #146173)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146911",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T05:44:02Z",
+      "labels": [
+        "type/bug",
+        "comp/gateway",
+        "P2",
+        "area/sessions"
+      ]
+    },
+    {
+      "number": 146395,
+      "title": "fix(gateway): a secondary-profile Webapp tab keeps a scale-to-zero instance awake",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146395",
+      "author": "kshitijk4poor",
+      "merged_at": "2026-10-31T05:40:49Z",
+      "labels": [
+        "type/bug",
+        "comp/gateway",
+        "P2",
+        "area/profiles",
+        "comp/tui-gateway"
+      ]
+    },
+    {
+      "number": 145862,
+      "title": "chore(plugin-catalog): bump kiwi to v1.2.3 (kiwi@0.12.7)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/145862",
+      "author": "harrylabsj",
+      "merged_at": "2026-10-31T05:02:02Z",
+      "labels": [
+        "comp/plugins",
+        "tool/mcp",
+        "P3",
+        "ci-reviewed"
+      ]
+    },
+    {
+      "number": 146715,
+      "title": "fix(secrets): move secret caches and the Photon token to the profile home root",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146715",
+      "author": "jquesnelle",
+      "merged_at": "2026-10-31T03:49:31Z",
+      "labels": [
+        "type/security",
+        "comp/agent",
+        "comp/cli",
+        "tool/file",
+        "area/auth",
+        "P3",
+        "comp/dashboard",
+        "os/windows"
+      ]
+    },
+    {
+      "number": 145802,
+      "title": "chore(plugins): pin birkin-mnemosyne to core 0.8.0",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/145802",
+      "author": "ashmoonori-afk",
+      "merged_at": "2026-10-31T01:59:02Z",
+      "labels": [
+        "comp/plugins",
+        "P3",
+        "ci-reviewed"
+      ]
+    },
+    {
+      "number": 144845,
+      "title": "fix(gateway): resolve the orphan idle probe's target before opening a read",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/144845",
+      "author": "cnkang",
+      "merged_at": "2026-10-30T20:26:02Z",
+      "labels": [
+        "type/bug",
+        "comp/gateway",
+        "P0",
+        "area/sessions"
+      ]
+    },
+    {
+      "number": 145645,
+      "title": "chore(catalog): re-pin llmslim to v0.12.0",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/145645",
+      "author": "Thanatos9404",
+      "merged_at": "2026-10-30T17:51:04Z",
+      "labels": [
+        "comp/plugins",
+        "P3",
+        "ci-reviewed",
+        "area/compression"
+      ]
+    }
+  ],
+  "created_pulls": [
+    {
+      "number": 147228,
+      "title": "Catalog: bump hermes-boot-screen to v1.2.0 (theme follows the OS)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147228",
+      "author": "OMOX563",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:51:48Z",
+      "merged_at": null
+    },
+    {
+      "number": 147226,
+      "title": "fix(desktop): hide submenus when their trigger scrolls out of view",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147226",
+      "author": "iaiannn",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:44:54Z",
+      "merged_at": null
+    },
+    {
+      "number": 147225,
+      "title": "catalog: add hermes-autonomous (proactive follow-ups, event-driven)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147225",
+      "author": "xiaok",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:43:35Z",
+      "merged_at": null
+    },
+    {
+      "number": 147224,
+      "title": "feat(plugins): artifact-pinned provenance — archive installs answer 'what am I'",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147224",
+      "author": "jacobhausler",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:43:09Z",
+      "merged_at": null
+    },
+    {
+      "number": 147223,
+      "title": "fix(test): isolate secret-scope ContextVar and blank profile env vars (#147198)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147223",
+      "author": "KissFeng",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:42:15Z",
+      "merged_at": null
+    },
+    {
+      "number": 147222,
+      "title": "fix(gateway): don't apply a provider-less session model override to the default provider",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147222",
+      "author": "echoes666",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:39:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 147221,
+      "title": "feat(delegate): delegation.cache_ttl lets subagents keep the 1h prompt-cache tier",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147221",
+      "author": "bluet",
+      "state": "OPEN",
+      "created_at": "2026-10-31T15:27:42Z",
+      "merged_at": null
+    },
+    {
+      "number": 147215,
+      "title": "fix(mattermost): stop sending setup to a profile dialog that has no user id",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147215",
+      "author": "xxxigm",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T15:07:44Z",
+      "merged_at": null
+    },
+    {
+      "number": 147213,
+      "title": "fix(fallback): surface the primary provider's expired login when the backup fails",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147213",
+      "author": "aantix",
+      "state": "OPEN",
+      "created_at": "2026-10-31T14:51:25Z",
+      "merged_at": null
+    },
+    {
+      "number": 147211,
+      "title": "feat(desktop): share selected conversation turns as HD image",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147211",
+      "author": "jackjackyang",
+      "state": "OPEN",
+      "created_at": "2026-10-31T14:42:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 147207,
+      "title": "fix(agent): count MiniMax hidden thinking tokens in usage accounting",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147207",
+      "author": "i-ankitkumar",
+      "state": "OPEN",
+      "created_at": "2026-10-31T14:26:55Z",
+      "merged_at": null
+    },
+    {
+      "number": 147206,
+      "title": "fix(desktop): a re-hydration cannot reset the Show-earlier paging cursor",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147206",
+      "author": "TheRealMisterFix",
+      "state": "OPEN",
+      "created_at": "2026-10-31T14:20:06Z",
+      "merged_at": null
+    },
+    {
+      "number": 147205,
+      "title": "feat(catalog): add breeze-tts, a Breeze Blue TTS provider",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147205",
+      "author": "MDsniper",
+      "state": "MERGED",
+      "created_at": "2026-10-31T14:12:24Z",
+      "merged_at": "2026-11-02T23:05:19Z"
+    },
+    {
+      "number": 147204,
+      "title": "fix(message_sanitization): carry only reasoning_content to NVIDIA NIM",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147204",
+      "author": "Aryasamadi",
+      "state": "OPEN",
+      "created_at": "2026-10-31T14:04:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 147203,
+      "title": "fix(gateway): prove a route-drifted wake refusal permanent so the drain cap drops it",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147203",
+      "author": "landcraft",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:59:21Z",
+      "merged_at": null
+    },
+    {
+      "number": 147202,
+      "title": "chore(plugin-catalog): bump better-session-appearance to 1.2.4",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147202",
+      "author": "apoapostolov",
+      "state": "MERGED",
+      "created_at": "2026-10-31T13:54:35Z",
+      "merged_at": "2026-11-02T22:58:14Z"
+    },
+    {
+      "number": 147201,
+      "title": "fix(desktop): prevent Mermaid foreignObject text clipping in isolated SVG img",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147201",
+      "author": "jackjackyang",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:42:32Z",
+      "merged_at": null
+    },
+    {
+      "number": 147200,
+      "title": "feat(desktop): offer @session: completions in the composer @ popover",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147200",
+      "author": "jackjackyang",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:42:29Z",
+      "merged_at": null
+    },
+    {
+      "number": 147199,
+      "title": "fix(gateway): expand @-references before vision and voice enrichment",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147199",
+      "author": "jackjackyang",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:41:43Z",
+      "merged_at": null
+    },
+    {
+      "number": 147194,
+      "title": "fix(message_sanitization): carry only reasoning_content to NVIDIA NIM",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147194",
+      "author": "Aryasamadi",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T13:21:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 147193,
+      "title": "fix(cron): retire one-shots whose claim owner is dead instead of wedging them forever",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147193",
+      "author": "LVsarff",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:18:16Z",
+      "merged_at": null
+    },
+    {
+      "number": 147192,
+      "title": "fix(gateway): adopt the canonical Bot Chat whoever minted it",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147192",
+      "author": "Th1nkTw1c3",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:13:58Z",
+      "merged_at": null
+    },
+    {
+      "number": 147191,
+      "title": "fix(desktop): prevent inline-code and parenthesized @ references from swallowing delimiters and trailing text",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147191",
+      "author": "jackjackyang",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:12:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 147190,
+      "title": "fix(minimax-oauth): live model catalog for the OAuth provider",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147190",
+      "author": "Fidelek84",
+      "state": "OPEN",
+      "created_at": "2026-10-31T13:03:48Z",
+      "merged_at": null
+    },
+    {
+      "number": 147188,
+      "title": "fix(browser): URL scanners read the host after any userinfo",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147188",
+      "author": "kshitijk4poor",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:48:24Z",
+      "merged_at": null
+    },
+    {
+      "number": 147186,
+      "title": "docs(skills): warn that himalaya 2.x does not expand MML",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147186",
+      "author": "skoch13agent",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:43:08Z",
+      "merged_at": null
+    },
+    {
+      "number": 147185,
+      "title": "fix(gateway): a thread wake rebuilt from its session key keeps its thread id",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147185",
+      "author": "riccelso",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T12:29:35Z",
+      "merged_at": null
+    },
+    {
+      "number": 147184,
+      "title": "fix(skills): one shared helper builds the sandbox document venvs and sweeps stale stages",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147184",
+      "author": "kshitijk4poor",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:28:47Z",
+      "merged_at": null
+    },
+    {
+      "number": 147183,
+      "title": "feat(vault): configurable idle timeout for native password-manager sessions",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147183",
+      "author": "phexik",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:22:29Z",
+      "merged_at": null
+    },
+    {
+      "number": 147182,
+      "title": "feat(telegram): per-chat link preview suppression",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147182",
+      "author": "phexik",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:22:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 147181,
+      "title": "fix(gateway): keep the multiplexer runtime for served profiles in status",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147181",
+      "author": "phexik",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:22:22Z",
+      "merged_at": null
+    },
+    {
+      "number": 147180,
+      "title": "fix(tools): resolve STT config secrets in the owning profile's scope",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147180",
+      "author": "phexik",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:22:18Z",
+      "merged_at": null
+    },
+    {
+      "number": 147178,
+      "title": "fix(gateway): preserve shared-gateway handoff evidence",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147178",
+      "author": "Cossackx",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:01:42Z",
+      "merged_at": null
+    },
+    {
+      "number": 147177,
+      "title": "fix(plugins): resolve MCP environment and native ownership",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147177",
+      "author": "Cossackx",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:01:39Z",
+      "merged_at": null
+    },
+    {
+      "number": 147176,
+      "title": "fix(mcp): reconcile desktop probe status and login windows",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147176",
+      "author": "Cossackx",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:01:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147175,
+      "title": "fix(auxiliary): scope Codex credential selection to the requested model",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147175",
+      "author": "Cossackx",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:01:34Z",
+      "merged_at": null
+    },
+    {
+      "number": 147174,
+      "title": "fix(telegram): filter mirrored messages before auth checks",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147174",
+      "author": "Cossackx",
+      "state": "OPEN",
+      "created_at": "2026-10-31T12:01:32Z",
+      "merged_at": null
+    },
+    {
+      "number": 147172,
+      "title": "fix(desktop-plugins): host reconcile treats Windows junctions as links; Desktop/ tested on a real case-insensitive volume",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147172",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-31T11:46:56Z",
+      "merged_at": "2026-11-01T01:58:45Z"
+    },
+    {
+      "number": 147171,
+      "title": "fix(desktop): Ctrl+C copies an unfocused transcript selection",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147171",
+      "author": "ephore",
+      "state": "OPEN",
+      "created_at": "2026-10-31T11:30:31Z",
+      "merged_at": null
+    },
+    {
+      "number": 147170,
+      "title": "chore(plugin-catalog): re-pin ctx_checkpoint to 0.6.2",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147170",
+      "author": "GottZ",
+      "state": "MERGED",
+      "created_at": "2026-10-31T11:24:01Z",
+      "merged_at": "2026-11-02T22:57:57Z"
+    },
+    {
+      "number": 147164,
+      "title": "fix(update): update-lock tidy-ups from the #146396 reviews",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147164",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-31T11:05:43Z",
+      "merged_at": "2026-11-01T01:56:34Z"
+    },
+    {
+      "number": 147163,
+      "title": "feat(cli): auto-detect updates launched inside a gateway tree",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147163",
+      "author": "mperaltad",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T10:52:21Z",
+      "merged_at": null
+    },
+    {
+      "number": 147162,
+      "title": "feat(gateway): add metadata-only session resume",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147162",
+      "author": "pitabletki",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:47:51Z",
+      "merged_at": null
+    },
+    {
+      "number": 147161,
+      "title": "test(docker): stand-in poll tests run in the default lanes; poll sleep stops at the deadline",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147161",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-31T10:46:57Z",
+      "merged_at": "2026-10-31T23:08:02Z"
+    },
+    {
+      "number": 147160,
+      "title": "Add a resolved file-write policy hook before backend effects",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147160",
+      "author": "vityache",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:39:33Z",
+      "merged_at": null
+    },
+    {
+      "number": 147158,
+      "title": "feat(mcp): add MyReach remote page publishing connector",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147158",
+      "author": "Kryptopaid",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:25:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147157,
+      "title": "feat(desktop): host.togglePane lets a plugin's shortcut hide its own pane",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147157",
+      "author": "mister-ideas",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:22:23Z",
+      "merged_at": null
+    },
+    {
+      "number": 147155,
+      "title": "test: record backup lock interruption coverage",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147155",
+      "author": "MightyDjinn",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:13:06Z",
+      "merged_at": null
+    },
+    {
+      "number": 147152,
+      "title": "fix(checkpoints): prune preview and execution agree on orphan detection",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147152",
+      "author": "youyoutu405-source",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:10:49Z",
+      "merged_at": null
+    },
+    {
+      "number": 147151,
+      "title": "fix(tools): process_manage log with a negative offset returns the last N lines instead of empty output",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147151",
+      "author": "nikolas-sapa",
+      "state": "OPEN",
+      "created_at": "2026-10-31T10:04:28Z",
+      "merged_at": null
+    },
+    {
+      "number": 147144,
+      "title": "fix(telegram): group messages not addressed to the bot can stay silent (#120051, salvage #137267)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147144",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-31T09:15:31Z",
+      "merged_at": "2026-10-31T10:03:50Z"
+    },
+    {
+      "number": 147143,
+      "title": "feat(gateway): rooms can opt into intentional silence (salvage #141293)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147143",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-31T09:15:28Z",
+      "merged_at": "2026-10-31T10:02:43Z"
+    },
+    {
+      "number": 147142,
+      "title": "Add StateJar memory provider to plugin catalog",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147142",
+      "author": "KING-OF-FLAME",
+      "state": "MERGED",
+      "created_at": "2026-10-31T09:13:37Z",
+      "merged_at": "2026-11-02T23:16:17Z"
+    },
+    {
+      "number": 147141,
+      "title": "chore(plugin-catalog): bump provider-status to 1.6.8",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147141",
+      "author": "apoapostolov",
+      "state": "MERGED",
+      "created_at": "2026-10-31T09:05:38Z",
+      "merged_at": "2026-11-02T22:57:36Z"
+    },
+    {
+      "number": 147140,
+      "title": "fmt(js): `npm run fix` auto-fix",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147140",
+      "author": "hermes-seaeye",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T09:04:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147138,
+      "title": "fix(cron): keep the session-title recovery non-raising so run_job cleanup cannot abort",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147138",
+      "author": "nikolas-sapa",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:46:10Z",
+      "merged_at": null
+    },
+    {
+      "number": 147137,
+      "title": "fix(gateway): resume republishes a waiting clarify in the legacy pending_clarify map",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147137",
+      "author": "xvorost86",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:43:09Z",
+      "merged_at": null
+    },
+    {
+      "number": 147136,
+      "title": "fix(gateway): accept desktop as the stored label of the gui creation source",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147136",
+      "author": "xvorost86",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:37:38Z",
+      "merged_at": null
+    },
+    {
+      "number": 147135,
+      "title": "fix(cli): wire interim_assistant_callback for non-streaming display (#147037)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147135",
+      "author": "Abelion512",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:36:46Z",
+      "merged_at": null
+    },
+    {
+      "number": 147133,
+      "title": "docs(slack): document native markdown blocks",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147133",
+      "author": "Risto0211",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:19:11Z",
+      "merged_at": null
+    },
+    {
+      "number": 147132,
+      "title": "feat(plugin-catalog): add LFG Alarm",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147132",
+      "author": "LFGWin",
+      "state": "MERGED",
+      "created_at": "2026-10-31T08:14:43Z",
+      "merged_at": "2026-11-02T22:34:48Z"
+    },
+    {
+      "number": 147131,
+      "title": "fix(auth): keep a MiniMax OAuth sign-in visible in the explicit-only picker",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147131",
+      "author": "otxboc",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:10:34Z",
+      "merged_at": null
+    },
+    {
+      "number": 147130,
+      "title": "feat(recovery): park transient 429 rate limits on the auto-recovery ladder",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147130",
+      "author": "judge419",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:02:32Z",
+      "merged_at": null
+    },
+    {
+      "number": 147129,
+      "title": "pm: cap Node majors a darwin host cannot run",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147129",
+      "author": "week009",
+      "state": "OPEN",
+      "created_at": "2026-10-31T08:02:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 147128,
+      "title": "feat(cli): honour display.json_output config default for --json (#147088)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147128",
+      "author": "Abelion512",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:58:44Z",
+      "merged_at": null
+    },
+    {
+      "number": 147127,
+      "title": "fix(managed_worker): pre-import numpy single-threaded before bootstrap threads start (silent wedge fix, see #147123)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147127",
+      "author": "ringofly",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:57:33Z",
+      "merged_at": null
+    },
+    {
+      "number": 147126,
+      "title": "fix(gemini): keep parallel same-name tool calls separate when streaming",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147126",
+      "author": "anacronw",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T07:57:31Z",
+      "merged_at": null
+    },
+    {
+      "number": 147125,
+      "title": "feat(optional-mcps): add TraderWAI MCP catalog entry",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147125",
+      "author": "leonardo-mazzitelli",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:47:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 147124,
+      "title": "Add HarnMem to the plugin catalog",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147124",
+      "author": "ys118",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:42:23Z",
+      "merged_at": null
+    },
+    {
+      "number": 147122,
+      "title": "fix(tools): surface MCP connect construction errors and resolve OAuth TLS through ssl_verify",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147122",
+      "author": "wsiczek",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:40:05Z",
+      "merged_at": null
+    },
+    {
+      "number": 147121,
+      "title": "fix(desktop): preserve sticky model routes across runtime updates",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147121",
+      "author": "nickchef",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:38:53Z",
+      "merged_at": null
+    },
+    {
+      "number": 147120,
+      "title": "fix(account_usage): Anthropic utilization is percent, not fraction (#147006)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147120",
+      "author": "Abelion512",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:16:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147119,
+      "title": "fix(state): drop messages on context-pressure failure rows in compact_result",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147119",
+      "author": "strzhao",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:16:18Z",
+      "merged_at": null
+    },
+    {
+      "number": 147117,
+      "title": "fix(gateway): documented per-platform streaming defaults apply at runtime",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147117",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:03:32Z",
+      "merged_at": null
+    },
+    {
+      "number": 147116,
+      "title": "docs(rhino): GCodeWriter and lattice-lamp shade references",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147116",
+      "author": "renleding",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:00:27Z",
+      "merged_at": null
+    },
+    {
+      "number": 147115,
+      "title": "feat(native): macOS terminal helper with explicit environment",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147115",
+      "author": "renleding",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:00:24Z",
+      "merged_at": null
+    },
+    {
+      "number": 147114,
+      "title": "feat(kanban): surface worktree identity on cards",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147114",
+      "author": "renleding",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:00:21Z",
+      "merged_at": null
+    },
+    {
+      "number": 147113,
+      "title": "feat(skills): add skills doctor and health checks",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147113",
+      "author": "renleding",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:00:18Z",
+      "merged_at": null
+    },
+    {
+      "number": 147112,
+      "title": "feat(skills): watch-video skill with local Ollama vision",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147112",
+      "author": "renleding",
+      "state": "OPEN",
+      "created_at": "2026-10-31T07:00:16Z",
+      "merged_at": null
+    },
+    {
+      "number": 147111,
+      "title": "kanban: PR-acceptance gate tolerates FORBIDDEN branchProtectionRule for App-token reviewers",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147111",
+      "author": "ydengAiwl",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:58:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 147108,
+      "title": "fix(computer_use): screenshot dedup counts a frame as seen only once it is delivered",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147108",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:53:08Z",
+      "merged_at": null
+    },
+    {
+      "number": 147107,
+      "title": "fix(gateway): tell the user when a post-stream MEDIA upload fails",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147107",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:53:06Z",
+      "merged_at": null
+    },
+    {
+      "number": 147106,
+      "title": "feat(mcp): `hermes mcp add --yes`, and the agent's MCP add/install/remove asks for approval",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147106",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:53:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 147105,
+      "title": "fix(skills): publish a new skill's SKILL.md exclusively so a concurrent writer is never overwritten",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147105",
+      "author": "dudals3844",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T06:37:02Z",
+      "merged_at": null
+    },
+    {
+      "number": 147101,
+      "title": "feat(nix): export flake.lib.mkHermesAgent so consumers stop reimplementing the package matrix",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147101",
+      "author": "RacciDev-Bot",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:25:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 147100,
+      "title": "fix(nix): derive the package version from __release_date__ instead of shipping 0.0.0",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147100",
+      "author": "RacciDev-Bot",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:24:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 147099,
+      "title": "fix(cli): first-run setup continues into the chat",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147099",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:20:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147098,
+      "title": "fix(build): skip npm PATH entries that realpath cannot resolve",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147098",
+      "author": "kisom",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:20:27Z",
+      "merged_at": null
+    },
+    {
+      "number": 147096,
+      "title": "fix(logs): skip historical output for zero-line tails",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147096",
+      "author": "jonathansaurens",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:16:28Z",
+      "merged_at": null
+    },
+    {
+      "number": 147095,
+      "title": "fix(read): preserve DOCX non-breaking hyphens",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147095",
+      "author": "jonathansaurens",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:15:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 147094,
+      "title": "plugin-catalog: bump Mnemosyne to 0.7.7",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147094",
+      "author": "otxboc",
+      "state": "OPEN",
+      "created_at": "2026-10-31T06:06:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 147093,
+      "title": "fix(vault): sync Bitwarden on demand so items shared after bw login are fillable",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147093",
+      "author": "bhargavmehta01",
+      "state": "OPEN",
+      "created_at": "2026-10-31T05:59:53Z",
+      "merged_at": null
+    },
+    {
+      "number": 147092,
+      "title": "fix(plugins): tell WHY a resolver failed, read a provider's re-export, and never downgrade a pin",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147092",
+      "author": "otxboc",
+      "state": "OPEN",
+      "created_at": "2026-10-31T05:48:25Z",
+      "merged_at": null
+    },
+    {
+      "number": 147090,
+      "title": "fix(terminal): one persistent-Docker container per named profile (salvage #146468)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147090",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-31T05:44:18Z",
+      "merged_at": "2026-10-31T06:03:59Z"
+    },
+    {
+      "number": 147089,
+      "title": "fix(native): fts5_cjk build.sh links on macOS",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147089",
+      "author": "leriou",
+      "state": "OPEN",
+      "created_at": "2026-10-31T05:43:50Z",
+      "merged_at": null
+    },
+    {
+      "number": 147086,
+      "title": "chore(plugin-catalog): bump machine-library to 0.1.1",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147086",
+      "author": "ppodolsky",
+      "state": "MERGED",
+      "created_at": "2026-10-31T05:27:57Z",
+      "merged_at": "2026-11-02T22:34:17Z"
+    },
+    {
+      "number": 147085,
+      "title": "fix(gateway): a handoff-watcher tick never starts a thread on the event loop",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147085",
+      "author": "newstex-sparky",
+      "state": "OPEN",
+      "created_at": "2026-10-31T05:23:48Z",
+      "merged_at": null
+    },
+    {
+      "number": 147081,
+      "title": "fix(cron): import `tick` lazily so `-m cron.scheduler` stops warning",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147081",
+      "author": "niubuhui818-oss",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:47:54Z",
+      "merged_at": null
+    },
+    {
+      "number": 147079,
+      "title": "fix(compression): stop the post-compression trim from stalling the dashboard loop",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147079",
+      "author": "ygd58",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:41:58Z",
+      "merged_at": null
+    },
+    {
+      "number": 147078,
+      "title": "feat(pm): add --dry-run/--json report to pm gc + doctor reclaimable-store check",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147078",
+      "author": "fotedev",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:40:20Z",
+      "merged_at": null
+    },
+    {
+      "number": 147077,
+      "title": "fix(session_search): honour query when session_id is set",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147077",
+      "author": "victor-kyriazakos",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:32:11Z",
+      "merged_at": null
+    },
+    {
+      "number": 147075,
+      "title": "fix(redact): per-line URL gate, recursive searches, argv dumps",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147075",
+      "author": "niubuhui818-oss",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:17:43Z",
+      "merged_at": null
+    },
+    {
+      "number": 147074,
+      "title": "Background-process waits can end the moment the awaited line prints (process_manage wait until=)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147074",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:11:56Z",
+      "merged_at": null
+    },
+    {
+      "number": 147073,
+      "title": "test(model-switch): make user-provider picker tests hermetic to a live Ollama",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147073",
+      "author": "i098",
+      "state": "OPEN",
+      "created_at": "2026-10-31T04:10:30Z",
+      "merged_at": null
+    },
+    {
+      "number": 147072,
+      "title": "fix(slack): render multi-select clarify as checkboxes + Submit",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147072",
+      "author": "danyim",
+      "state": "OPEN",
+      "created_at": "2026-10-31T03:43:34Z",
+      "merged_at": null
+    },
+    {
+      "number": 147068,
+      "title": "fix(copilot-acp): catch BrokenPipeError on write and allow disabling via config (#147051)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147068",
+      "author": "Rustaman1280",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T03:28:05Z",
+      "merged_at": null
+    },
+    {
+      "number": 147067,
+      "title": "fix(tools): surface the MCP inheritance an empty platform_toolsets list still gets; document no_mcp",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147067",
+      "author": "mwilliams",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T03:24:47Z",
+      "merged_at": null
+    },
+    {
+      "number": 147066,
+      "title": "fix(dashboard): build /api/config/schema off the event loop",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147066",
+      "author": "mwilliams",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T03:24:34Z",
+      "merged_at": null
+    },
+    {
+      "number": 147065,
+      "title": "catalog: add Cadence local usage page",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147065",
+      "author": "abundantbeing",
+      "state": "MERGED",
+      "created_at": "2026-10-31T03:16:54Z",
+      "merged_at": "2026-11-02T22:22:38Z"
+    },
+    {
+      "number": 147064,
+      "title": "fix(slack): decode base64 image uploads",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147064",
+      "author": "doudoujay",
+      "state": "CLOSED",
+      "created_at": "2026-10-31T03:16:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147063,
+      "title": "catalog: bump agent-hint to 0.7.1 (sha f9ee87b)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147063",
+      "author": "liteboy-bit",
+      "state": "MERGED",
+      "created_at": "2026-10-31T03:16:26Z",
+      "merged_at": "2026-11-02T22:33:45Z"
+    },
+    {
+      "number": 147062,
+      "title": "Email: HTML entities decode once, so escaped text stays literal (#68704, salvage #68707)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147062",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-31T03:06:13Z",
+      "merged_at": null
+    },
+    {
+      "number": 147060,
+      "title": "fix(desktop): honor focused chat tiles for preview and tour ownership",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147060",
+      "author": "vitaliy-blprnt",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:55:47Z",
+      "merged_at": null
+    },
+    {
+      "number": 147059,
+      "title": "fix(desktop): preserve successful preview clicks across navigation",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147059",
+      "author": "vitaliy-blprnt",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:54:52Z",
+      "merged_at": null
+    },
+    {
+      "number": 147058,
+      "title": "chore(plugins): pin birkin-mnemosyne to core 0.9.0",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147058",
+      "author": "ashmoonori-afk",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:50:24Z",
+      "merged_at": null
+    },
+    {
+      "number": 147056,
+      "title": "feat(google-workspace): named Google accounts with --account",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147056",
+      "author": "bhargavmehta01",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:44:16Z",
+      "merged_at": null
+    },
+    {
+      "number": 147055,
+      "title": "perf(tui): adaptive flush for reasoning and streaming batches",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147055",
+      "author": "kfatyuip",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:38:59Z",
+      "merged_at": null
+    },
+    {
+      "number": 147054,
+      "title": "fix(ssh): keep ControlMaster sockets under sun_path for deep profile temp dirs",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147054",
+      "author": "demi-hl",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:37:42Z",
+      "merged_at": null
+    },
+    {
+      "number": 147053,
+      "title": "fix(desktop): preserve provider settings destination without OAuth catalog",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147053",
+      "author": "vitaliy-blprnt",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:31:59Z",
+      "merged_at": null
+    },
+    {
+      "number": 147052,
+      "title": "feat(desktop): add managed oMLX alongside llama.cpp",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147052",
+      "author": "vitaliy-blprnt",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:31:56Z",
+      "merged_at": null
+    },
+    {
+      "number": 147050,
+      "title": "fix(acp): route Copilot prompt-budget refusals into overflow recovery",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147050",
+      "author": "newdeme",
+      "state": "OPEN",
+      "created_at": "2026-10-31T02:17:35Z",
+      "merged_at": null
+    },
+    {
+      "number": 147047,
+      "title": "fix(agent): measure the session turn lease on the awake clock",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147047",
+      "author": "sionic-khope",
+      "state": "OPEN",
+      "created_at": "2026-10-31T01:41:32Z",
+      "merged_at": null
+    },
+    {
+      "number": 147046,
+      "title": "fix(gateway): tell the user when the system stopped a turn",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147046",
+      "author": "sionic-khope",
+      "state": "OPEN",
+      "created_at": "2026-10-31T01:40:27Z",
+      "merged_at": null
+    },
+    {
+      "number": 147045,
+      "title": "chore(catalog): enable OpenCode Free ACP 0.4.0 on Windows and macOS",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147045",
+      "author": "cryptobredda",
+      "state": "OPEN",
+      "created_at": "2026-10-31T01:40:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 147044,
+      "title": "fix(desktop): retract recovered task problem toasts",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147044",
+      "author": "artyficialmind",
+      "state": "OPEN",
+      "created_at": "2026-10-31T01:23:23Z",
+      "merged_at": null
+    },
+    {
+      "number": 147043,
+      "title": "Desktop: Escape in a side pane folds it instead of stopping the reply",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147043",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-31T01:21:35Z",
+      "merged_at": null
+    },
+    {
+      "number": 147042,
+      "title": "fix(files): preserve final newline on exact cross-file copies",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147042",
+      "author": "eva-kuptsova",
+      "state": "OPEN",
+      "created_at": "2026-10-31T01:09:56Z",
+      "merged_at": null
+    },
+    {
+      "number": 147040,
+      "title": "feat(feishu): interactive card model picker",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147040",
+      "author": "glassesmonkey",
+      "state": "OPEN",
+      "created_at": "2026-10-31T00:56:20Z",
+      "merged_at": null
+    },
+    {
+      "number": 147034,
+      "title": "fix(kanban): isolate worker imports from task workspaces",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147034",
+      "author": "artyficialmind",
+      "state": "OPEN",
+      "created_at": "2026-10-31T00:40:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 147033,
+      "title": "fix(kanban): reject incompatible PR review handoffs",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147033",
+      "author": "artyficialmind",
+      "state": "OPEN",
+      "created_at": "2026-10-31T00:39:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 147032,
+      "title": "fix(cron): avoid dotted-member lifecycle false positives",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147032",
+      "author": "fanzeti",
+      "state": "OPEN",
+      "created_at": "2026-10-31T00:24:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 147031,
+      "title": "Background git status reads no longer block the agent's git add/commit on index.lock (salvage #118111)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147031",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-31T00:11:25Z",
+      "merged_at": null
+    },
+    {
+      "number": 147030,
+      "title": "fix(cron): serialize ledger writes so SQLite contention waits instead of killing the worker",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147030",
+      "author": "daidai8910g",
+      "state": "OPEN",
+      "created_at": "2026-10-31T00:11:20Z",
+      "merged_at": null
+    },
+    {
+      "number": 147029,
+      "title": "fix(bridge): bump body-parser (overrides) to 1.20.9",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147029",
+      "author": "rafaeldrincon",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:56:59Z",
+      "merged_at": null
+    },
+    {
+      "number": 147028,
+      "title": "fix(deps): bump undici, zod, fast-uri past security advisories",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147028",
+      "author": "rafaeldrincon",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:56:53Z",
+      "merged_at": null
+    },
+    {
+      "number": 147027,
+      "title": "plugin-catalog: re-pin hermes-finance to v0.2.6 (apelabs-dev repo, new screenshot)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147027",
+      "author": "arspesk",
+      "state": "MERGED",
+      "created_at": "2026-10-30T23:52:34Z",
+      "merged_at": "2026-11-02T22:57:14Z"
+    },
+    {
+      "number": 147024,
+      "title": "catalog: re-pin limbic 0.9.3 to release commit b8c2a0e",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147024",
+      "author": "dyiapanis",
+      "state": "CLOSED",
+      "created_at": "2026-10-30T23:31:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 147023,
+      "title": "feat(desktop): optional SSH tunnel for Remote gateway connections",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147023",
+      "author": "Albrod",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:31:54Z",
+      "merged_at": null
+    },
+    {
+      "number": 147022,
+      "title": "fix(kanban-notifier): suppress stale failure wakes for terminal cards",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147022",
+      "author": "ultron-aquabutler",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:25:33Z",
+      "merged_at": null
+    },
+    {
+      "number": 147021,
+      "title": "fix(kanban): release recovered cards from historical auth error stamps",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147021",
+      "author": "DS-Matt",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:13:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 147018,
+      "title": "security: pin filelock/msgpack and bump undici/zod audit overrides",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147018",
+      "author": "markitzerosmokey",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:03:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 147017,
+      "title": "fix(guardrails): stop turn-ending halt replays and say AGAIN on repeat (#146494)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147017",
+      "author": "qweadzxcs12-hue",
+      "state": "OPEN",
+      "created_at": "2026-10-30T23:00:29Z",
+      "merged_at": null
+    },
+    {
+      "number": 147009,
+      "title": "Catalog: bunny_space-platform v1.0.7 (pin + version)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147009",
+      "author": "jasm001",
+      "state": "MERGED",
+      "created_at": "2026-10-30T22:49:43Z",
+      "merged_at": "2026-11-02T22:56:53Z"
+    },
+    {
+      "number": 147007,
+      "title": "mcp-catalog: add kernelcad and labwired",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147007",
+      "author": "w1ne",
+      "state": "OPEN",
+      "created_at": "2026-10-30T22:39:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 147003,
+      "title": "feat(plugin-catalog): add priors plugin",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147003",
+      "author": "priors-agents",
+      "state": "MERGED",
+      "created_at": "2026-10-30T22:27:43Z",
+      "merged_at": "2026-11-02T22:22:19Z"
+    },
+    {
+      "number": 147001,
+      "title": "feat(plugin-catalog): add iwork-studio",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147001",
+      "author": "Arkanji",
+      "state": "MERGED",
+      "created_at": "2026-10-30T22:04:20Z",
+      "merged_at": "2026-11-02T22:22:01Z"
+    },
+    {
+      "number": 147000,
+      "title": "fix(computer_use): address cua-driver 0.38 elements by token, not element_index",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/147000",
+      "author": "chengZhangHR",
+      "state": "CLOSED",
+      "created_at": "2026-10-30T22:03:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 146998,
+      "title": "fix(agent): stop mutually wrapped streams from recursing in attribute delegation",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146998",
+      "author": "anettwassmann",
+      "state": "CLOSED",
+      "created_at": "2026-10-30T21:47:39Z",
+      "merged_at": null
+    },
+    {
+      "number": 146997,
+      "title": "fix(discord): strip only leading self-mentions from the inbound body",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146997",
+      "author": "anettwassmann",
+      "state": "OPEN",
+      "created_at": "2026-10-30T21:47:33Z",
+      "merged_at": null
+    },
+    {
+      "number": 146993,
+      "title": "fix(gateway): name the event-loop thread in watchdog dumps, ahead of faulthandler's 100-thread cap",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146993",
+      "author": "brownser",
+      "state": "OPEN",
+      "created_at": "2026-10-30T21:20:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 146991,
+      "title": "feat(dashboard): add fullscreen toggle and universal focus mode",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146991",
+      "author": "y00rhighness",
+      "state": "OPEN",
+      "created_at": "2026-10-30T21:14:07Z",
+      "merged_at": null
+    },
+    {
+      "number": 146990,
+      "title": "fix(cli): stop re-paying the OSC 11 probe timeout on silent terminals",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146990",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-30T21:09:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 146989,
+      "title": "fix(computer-use): a closed target window asks for a new capture instead of a delivery escalation",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146989",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-30T21:09:52Z",
+      "merged_at": null
+    },
+    {
+      "number": 146988,
+      "title": "fix(agent): a tool_call the bridge rejects counts as a failed call for the loop guard",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146988",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:58:23Z",
+      "merged_at": null
+    },
+    {
+      "number": 146987,
+      "title": "fix(agent): the out-of-retries reply says when your backup providers failed too",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146987",
+      "author": "100yenadmin",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:42:55Z",
+      "merged_at": null
+    },
+    {
+      "number": 146986,
+      "title": "feat(discord): send_message, react, archive_thread, edit_message + thread membership fix",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146986",
+      "author": "squareoneai2025",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:38:03Z",
+      "merged_at": null
+    },
+    {
+      "number": 146985,
+      "title": "perf(skills): stop rescanning the library on every keystroke and skill load",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146985",
+      "author": "AdityaVG13",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:35:29Z",
+      "merged_at": null
+    },
+    {
+      "number": 146981,
+      "title": "🐛 fix(slack): convert bold emphasis that spans lines",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146981",
+      "author": "sdougbrown",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:09:09Z",
+      "merged_at": null
+    },
+    {
+      "number": 146980,
+      "title": "catalog: bump custom-dangerous-patterns to 0.5.2 (approval card shows the command)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146980",
+      "author": "scross01",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:06:45Z",
+      "merged_at": null
+    },
+    {
+      "number": 146979,
+      "title": "fix(gateway): read a SO_PEERCRED uid at or above 2**31 as unsigned (#146782)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146979",
+      "author": "erhnysr",
+      "state": "OPEN",
+      "created_at": "2026-10-30T20:05:35Z",
+      "merged_at": null
+    },
+    {
+      "number": 146978,
+      "title": "perf(docker): agents boot about twice as fast by shipping compiled bytecode",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146978",
+      "author": "IAvecilla",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:50:44Z",
+      "merged_at": null
+    },
+    {
+      "number": 146977,
+      "title": "feat(sessions): record external session outcomes",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146977",
+      "author": "Sha01in",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:48:12Z",
+      "merged_at": null
+    },
+    {
+      "number": 146975,
+      "title": "chore(catalog): update CLI Session Tabs to 1.1.0",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146975",
+      "author": "cryptobredda",
+      "state": "MERGED",
+      "created_at": "2026-10-30T19:34:40Z",
+      "merged_at": "2026-11-02T22:21:42Z"
+    },
+    {
+      "number": 146974,
+      "title": "feat(tui): add directory-scoped native session tabs",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146974",
+      "author": "cryptobredda",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:28:46Z",
+      "merged_at": null
+    },
+    {
+      "number": 146972,
+      "title": "fix(gateway): read discord from the adapter facade after a lazy install",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146972",
+      "author": "roudra323",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:25:25Z",
+      "merged_at": null
+    },
+    {
+      "number": 146971,
+      "title": "fix(gateway): deliver review_reopened to kanban subscribers (salvages #135758)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146971",
+      "author": "strzhao",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:20:27Z",
+      "merged_at": null
+    },
+    {
+      "number": 146969,
+      "title": "fix(gateway): retire queued-prompt rows that Stop discards",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146969",
+      "author": "grogroningem-code",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:15:17Z",
+      "merged_at": null
+    },
+    {
+      "number": 146967,
+      "title": "fix(browser): never open a persistent profile with an older Chromium",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146967",
+      "author": "RVZO6",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:10:07Z",
+      "merged_at": null
+    },
+    {
+      "number": 146966,
+      "title": "fix(kanban): stop sending a dispatched worker's card twice",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146966",
+      "author": "siimtolk",
+      "state": "OPEN",
+      "created_at": "2026-10-30T19:09:02Z",
+      "merged_at": null
+    },
+    {
+      "number": 146963,
+      "title": "fix(tui): /quit --delete removes the session before exit",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146963",
+      "author": "Eloquencere",
+      "state": "OPEN",
+      "created_at": "2026-10-30T18:11:43Z",
+      "merged_at": null
+    },
+    {
+      "number": 146962,
+      "title": "session_search finds results when the query ends with a full stop (#146747)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146962",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-30T18:11:12Z",
+      "merged_at": null
+    },
+    {
+      "number": 146961,
+      "title": "feat(gateway): per-channel fallback_providers in channel_overrides",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146961",
+      "author": "Dhi13man",
+      "state": "OPEN",
+      "created_at": "2026-10-30T18:05:24Z",
+      "merged_at": null
+    },
+    {
+      "number": 146960,
+      "title": "catalog: add searchable Annotate for Hermes capability after SDK release",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146960",
+      "author": "LarryLemonBot",
+      "state": "OPEN",
+      "created_at": "2026-10-30T18:02:48Z",
+      "merged_at": null
+    },
+    {
+      "number": 146959,
+      "title": "feat(desktop): add response annotation attachments to the composer SDK",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146959",
+      "author": "LarryLemonBot",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:56:41Z",
+      "merged_at": null
+    },
+    {
+      "number": 146957,
+      "title": "fix(cron): reconcile terminal Bot Chat delivery receipts",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146957",
+      "author": "kacperpietrzyk",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:53:10Z",
+      "merged_at": null
+    },
+    {
+      "number": 146954,
+      "title": "feat(plugin-catalog): add recued portable plugin",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146954",
+      "author": "recued",
+      "state": "MERGED",
+      "created_at": "2026-10-30T17:21:39Z",
+      "merged_at": "2026-11-02T22:56:34Z"
+    },
+    {
+      "number": 146953,
+      "title": "feat(telegram): opt-in ignore_forwarded_messages switch",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146953",
+      "author": "gitlevo",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:16:15Z",
+      "merged_at": null
+    },
+    {
+      "number": 146952,
+      "title": "fix(skills): word-tolerant prompt-injection check in skill_view",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146952",
+      "author": "gitlevo",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:16:12Z",
+      "merged_at": null
+    },
+    {
+      "number": 146951,
+      "title": "feat(providers): add Scaleway Generative APIs as a model provider",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146951",
+      "author": "reda-maizate",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:15:54Z",
+      "merged_at": null
+    },
+    {
+      "number": 146950,
+      "title": "ci(release): drop retired tag/claim shapes; version commit and channel builds after their stable ancestor",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146950",
+      "author": "ethernet8023",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:11:10Z",
+      "merged_at": null
+    },
+    {
+      "number": 146949,
+      "title": "ci(release): delete dead pipeline inputs, jobs, dispatchers and duplicated tests",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146949",
+      "author": "ethernet8023",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:11:05Z",
+      "merged_at": null
+    },
+    {
+      "number": 146948,
+      "title": "fix(release): one claim-driven publication custody and upgrade-arms gate for canary and channel",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146948",
+      "author": "ethernet8023",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:11:00Z",
+      "merged_at": null
+    },
+    {
+      "number": 146947,
+      "title": "fix(tools): resolve MCP HTTP ssl_verify through agent.ssl_verify",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146947",
+      "author": "heyseere",
+      "state": "OPEN",
+      "created_at": "2026-10-30T17:08:29Z",
+      "merged_at": null
+    },
+    {
+      "number": 146944,
+      "title": "fix(agent): continue after trailing action promises",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146944",
+      "author": "ca1sup",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:59:42Z",
+      "merged_at": null
+    },
+    {
+      "number": 146940,
+      "title": "fix(cron): compute the session-title fallback lazily inside its recovery block",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146940",
+      "author": "princejain756",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:54:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 146939,
+      "title": "Enhance My-H branding, update installer, and resolve conflicts",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146939",
+      "author": "chaorenex1",
+      "state": "CLOSED",
+      "created_at": "2026-10-30T16:51:18Z",
+      "merged_at": null
+    },
+    {
+      "number": 146938,
+      "title": "fix(processes): let read_log take a negative offset to mean \"the last N lines\"",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146938",
+      "author": "princejain756",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:50:02Z",
+      "merged_at": null
+    },
+    {
+      "number": 146937,
+      "title": "fix(gateway): read the RPC owner scope and ancillary polls off the event loop",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146937",
+      "author": "kshitijk4poor",
+      "state": "MERGED",
+      "created_at": "2026-10-30T16:45:40Z",
+      "merged_at": "2026-10-31T07:26:23Z"
+    },
+    {
+      "number": 146936,
+      "title": "fix(agent): always warn when the API request dump fails",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146936",
+      "author": "DiamonDinoia",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:45:27Z",
+      "merged_at": null
+    },
+    {
+      "number": 146935,
+      "title": "fix(tui): open the agents overlay on Ctrl+T over a pending prompt",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146935",
+      "author": "DiamonDinoia",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:45:24Z",
+      "merged_at": null
+    },
+    {
+      "number": 146934,
+      "title": "fix(tui): bind queue retry to Alt+K as every hint states",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146934",
+      "author": "DiamonDinoia",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:45:13Z",
+      "merged_at": null
+    },
+    {
+      "number": 146933,
+      "title": "fix(deps): patch npm advisories and restore glob compatibility",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146933",
+      "author": "alarconm",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:43:50Z",
+      "merged_at": null
+    },
+    {
+      "number": 146932,
+      "title": "fix(cron): report delivery_not_configured instead of \"ok\" when deliver=origin resolves nowhere",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146932",
+      "author": "wxxb789",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:41:05Z",
+      "merged_at": null
+    },
+    {
+      "number": 146931,
+      "title": "fix(loops): coalesce duplicate same-index /loop wakeups via persisted-transcript dedupe (sys-8xces5)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146931",
+      "author": "atbrace",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:40:09Z",
+      "merged_at": null
+    },
+    {
+      "number": 146930,
+      "title": "catalog: update hermes-auto-titler to v0.3.1",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146930",
+      "author": "Vocllum",
+      "state": "MERGED",
+      "created_at": "2026-10-30T16:37:09Z",
+      "merged_at": "2026-11-02T22:56:16Z"
+    },
+    {
+      "number": 146929,
+      "title": "fix(pm): a corrupt cached package no longer blocks every install",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146929",
+      "author": "benbarclay",
+      "state": "MERGED",
+      "created_at": "2026-10-30T16:29:52Z",
+      "merged_at": "2026-11-02T04:07:31Z"
+    },
+    {
+      "number": 146927,
+      "title": "fix(deps): update vulnerable Zod and Undici locks",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146927",
+      "author": "fagnersouza666",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:23:51Z",
+      "merged_at": null
+    },
+    {
+      "number": 146926,
+      "title": "Tests no longer fail when a child they proved gone is reaped mid-check (psutil NoSuchProcess flake)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146926",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:18:20Z",
+      "merged_at": null
+    },
+    {
+      "number": 146925,
+      "title": "ACP agents that reply and exit at once no longer lose the reply (salvage #140002)",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146925",
+      "author": "teknium1",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:13:54Z",
+      "merged_at": null
+    },
+    {
+      "number": 146923,
+      "title": "feat(plugin-catalog): bump signal-notify to v1.1.0",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146923",
+      "author": "dbrosnan",
+      "state": "MERGED",
+      "created_at": "2026-10-30T16:12:46Z",
+      "merged_at": "2026-11-02T22:21:25Z"
+    },
+    {
+      "number": 146921,
+      "title": "fix(codex): route app-server MCP tool-call approvals to the session",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/146921",
+      "author": "cesdperez",
+      "state": "OPEN",
+      "created_at": "2026-10-30T16:05:38Z",
+      "merged_at": null
+    }
+  ],
+  "closed_issues": [
+    {
+      "number": 147091,
+      "title": "Plugin install alias mechanism for repository shorthand resolution",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/147091",
+      "closed_at": "2026-10-31T06:18:58Z",
+      "author": "iap",
+      "fix_prs": []
+    },
+    {
+      "number": 147083,
+      "title": "Desktop Kanban plugin: enabled (correct per-profile scope) but sidebar entry never registers after full app restart",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/147083",
+      "closed_at": "2026-10-31T05:31:54Z",
+      "author": "redhoram",
+      "fix_prs": []
+    },
+    {
+      "number": 147013,
+      "title": "api_server stamps sessions source=hermes_browser but three admission gates refuse it — every hermes-browser-extension turn fails with permission_denied",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/147013",
+      "closed_at": "2026-10-30T23:32:48Z",
+      "author": "nirvana6",
+      "fix_prs": []
+    },
+    {
+      "number": 101007,
+      "title": "`mcp_servers.<name>.lazy` never engages: schema cache entries written with `ttl_ms: 0` are treated as expired",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/101007",
+      "closed_at": "2026-10-31T09:50:51Z",
+      "author": "Summer9212",
+      "fix_prs": [
+        101050,
+        134622,
+        144558
+      ]
+    },
+    {
+      "number": 142962,
+      "title": "chore(catalog): limbic entry @ 0.9.0",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/142962",
+      "closed_at": "2026-10-30T23:26:47Z",
+      "author": "dyiapanis",
+      "fix_prs": []
+    },
+    {
+      "number": 145387,
+      "title": "Gateway deadlocks at startup with database.journal_mode: delete (nested _read_ctx in _idle_s)",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/145387",
+      "closed_at": "2026-10-30T20:26:04Z",
+      "author": "droopanu",
+      "fix_prs": [
+        144845
+      ]
+    },
+    {
+      "number": 145313,
+      "title": "Plugin catalog: supported way to reuse an existing Composio user credential",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/145313",
+      "closed_at": "2026-10-30T20:15:08Z",
+      "author": "luisced",
+      "fix_prs": []
+    }
+  ]
+}
