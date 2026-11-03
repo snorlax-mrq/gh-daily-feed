@@ -1,0 +1,108 @@
+# GitHub Actions 每日匯出（選用）
+#
+# 放在一個「自己的新 repo」裡（不要 fork 要監控的專案——fork 預設不跑 workflow）：
+#   <your>/gh-daily-feed/.github/workflows/daily-export.yml
+#   <your>/gh-daily-feed/scripts/gh-actions/export.mjs
+#
+# 它在做什麼：
+#   1. 每天 16:10 UTC（= 00:10 台北，跨日後 10 分鐘）用 repo 自帶的 GITHUB_TOKEN
+#      （GraphQL 1,000 點/hr/repo）分頁抓 vLLM 與 hermes-agent「剛結束的那個台北日」。
+#   2. 寫成 out/<owner>__<repo>/<YYYY-MM-DD>.json（含 coverage，truncated 必為 false）。
+#   3. commit 到 `daily-feed` 分支 → 免費的每日快照。
+#
+# 為什麼排在跨日後：抓「昨天整天」，資料一定是完整的；任何時間手動跑也一樣安全。
+#
+# MyAgent 端之後只要抓（不帶 token、不佔額度）：
+#   https://raw.githubusercontent.com/<you>/gh-daily-feed/daily-feed/out/vllm-project__vllm/2026-11-02.json
+#
+# 完整步驟與注意事項：https://github.com/<you>/gh-daily-feed#readme
+
+name: daily-export
+
+on:
+  schedule:
+    - cron: "10 16 * * *"   # 16:10 UTC = 00:10 Asia/Taipei（匯出剛結束的台北日）
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "要匯出的日期（YYYY-MM-DD）。留空＝台北時區昨天"
+        required: false
+      days:
+        description: "往回補幾天（留空＝1）"
+        required: false
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-export
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    env:
+      TARGET_REPOS: "vllm-project/vllm NousResearch/hermes-agent"
+      EXPORT_DATE: ${{ inputs.date }}
+      EXPORT_DAYS: ${{ inputs.days }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 匯出（每頁 100、cursor 分頁、updatedAt/createdAt 早停）
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 選用：若讀別的公開 repo 被權限擋住，在 repo secrets 設 GH_PAT（fine-grained，public repo read）
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          set -euo pipefail
+          days="${EXPORT_DAYS:-1}"
+          [[ "$days" =~ ^[0-9]+$ ]] || { echo "days 必須是整數：$days"; exit 1; }
+          # 未指定日期時抓「台北昨天」——一定是完整的一天，任何時間手動跑都安全
+          base="${EXPORT_DATE:-$(TZ=Asia/Taipei date -d yesterday +%F)}"
+          echo "匯出基準日：$base，往回 $days 天"
+          for repo in $TARGET_REPOS; do
+            for i in $(seq 0 $((days - 1))); do
+              d=$(TZ=Asia/Taipei date -d "$base -$i days" +%F)
+              node scripts/gh-actions/export.mjs "$repo" "$d"
+            done
+          done
+
+      - name: 檢查完整性（truncated 必須為 false）
+        run: |
+          node -e '
+            const fs=require("fs"),path=require("path");
+            const walk=(d)=>fs.readdirSync(d,{withFileTypes:true})
+              .flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
+            let bad=0, n=0;
+            for (const f of walk("out")) {
+              const j=JSON.parse(fs.readFileSync(f,"utf8")); n++;
+              if (j.coverage?.truncated) { console.error("⚠️ 截斷："+f); bad++; }
+              if (j.window?.from !== undefined && j.window?.to === undefined) { console.error("⚠️ 窗口不完整："+f); bad++; }
+            }
+            console.log(`檢查 ${n} 份快照，${bad} 份有問題`);
+            if (bad) process.exit(2);
+          '
+
+      - name: 推到 daily-feed 分支
+        run: |
+          set -euo pipefail
+          git config user.name "daily-export[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf /tmp/export-out && cp -r out /tmp/export-out
+          if git ls-remote --exit-code --heads origin daily-feed >/dev/null 2>&1; then
+            git fetch origin daily-feed
+            git checkout -B daily-feed origin/daily-feed
+          else
+            git checkout --orphan daily-feed
+            git rm -rf . --quiet
+            printf '# daily-feed\n\nGitHub Actions 每日匯出的 PR／issue 快照（含 coverage）。\n\n路徑：`out/<owner>__<repo>/<YYYY-MM-DD>.json`（日期為 Asia/Taipei 日界）\n' > README.md
+          fi
+          mkdir -p out && cp -r /tmp/export-out/. out/
+          git add out README.md
+          git commit -m "export $(TZ=Asia/Taipei date +%F)" || echo "沒有變化，跳過 commit"
+          git push origin daily-feed
