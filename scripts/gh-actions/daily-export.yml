@@ -22,6 +22,12 @@ name: daily-export
 on:
   schedule:
     - cron: "10 16 * * *"   # 16:10 UTC = 00:10 Asia/Taipei（匯出剛結束的台北日）
+  # 改了抓取程式或這支 workflow 就自動跑一次＝自我測試（不必等隔天排程）
+  push:
+    branches: [main]
+    paths:
+      - "scripts/gh-actions/export.mjs"
+      - ".github/workflows/daily-export.yml"
   workflow_dispatch:
     inputs:
       date:
